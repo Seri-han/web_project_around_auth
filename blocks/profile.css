@@ -1,0 +1,124 @@
+.profile {
+    max-width: 880px;
+    margin-inline: auto;
+    padding-top: 39px;
+    width: 90%;
+}
+
+.profile__avatar {
+	border-radius: 50%;
+	width: 120px;
+    height: 120px;
+}
+
+.profile__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile__info {
+    flex: 2;
+    display: grid;
+    grid-template-rows: 16px 22px;
+    grid-template-columns: 280px 24px;
+    grid-template-areas:
+  "a b" 
+  "c .";
+    gap: 18px;
+    align-items: baseline;
+    padding-left: 30px;
+    padding-top: 22px;
+}
+
+.profile__info-header {
+font-family: Inter;
+font-size: 2.625rem;
+font-weight: 500;
+line-height: 1;
+text-align: left;
+grid-area: a;
+margin: 0;
+text-overflow: ellipsis;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.profile__info-title {
+font-family: Inter;
+font-size: 1.125rem;
+font-weight: 400;
+line-height: 1;
+text-align: left;
+margin-top: 16px;
+grid-area: c;
+}
+
+.profile__info-edit-btn {
+    width: 24px;
+    cursor: pointer;
+    height: 24px;
+    color: black;
+    grid-area: b;
+}
+
+.button-image {
+	width: 24px;
+	height: 24px;
+}
+
+.profile__add-btn {
+	flex: 1;
+	max-width: 150px;
+	height: 50px;
+	background-color: transparent;
+	color: white;
+	border: 2px solid white;
+	font-size: 2rem;
+    padding-bottom: 0.25rem;
+    margin-top: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile__add-btn:hover {
+background-color: white;
+color: black;
+}
+
+@media screen and (max-width: 769px) {
+    .profile {
+        align-items: center;
+    }
+
+    .profile__container {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .profile__info-title {
+        text-align: center;
+        font-size: 0.875rem;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .profile__add-btn {
+        max-width: 282px;
+        width: 100%;
+        height: 50px;
+        margin-top: 16px;
+    }
+
+    .profile__info-header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .profile__info {
+        padding-left: 0;
+    grid-template-columns: auto 0;
+    grid-template-rows: auto auto; 
+    }
+}

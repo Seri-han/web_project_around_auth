@@ -1,0 +1,86 @@
+.elements {
+  padding-top: 51px;
+  max-width: 880px;
+  margin-inline: auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  /* grid-template-areas;
+    ''
+    ''
+    ; */
+}
+
+.element {
+  max-width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  width: 95%;
+  margin-inline: auto;
+  position: relative;
+}
+
+.element__image {
+  width: 282px;
+  height: 282px;
+  grid-area: image;
+}
+
+.element__title {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 220px;
+}
+
+.element__like {
+  background-image: url(../images/heart_icon.png);
+  background-size: contain;
+  width: 21px;
+  height: 19px;
+  position: relative;
+  cursor: pointer;
+  bottom: 45px;
+  left: 239px;
+}
+
+.element__like:hover {
+  opacity: 0.7;
+}
+
+.element__like:active {
+  opacity: 1;
+}
+
+.element__like.active {
+  background-image: url(../images/heart_active.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 19px;
+}
+
+.element__trash {
+  border: none;
+  height: 18px;
+  width: 19px;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.trash-bin {
+  height: 100%;
+  width: 100%;
+}

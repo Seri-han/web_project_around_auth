@@ -1,0 +1,15 @@
+.header__logo {
+    max-width: 880px;
+    max-height: 74px;
+    width: 90%;
+    margin-inline: auto;
+    padding-top: 45px;
+    padding-bottom: 41px;
+    border-bottom: 1px solid #545454;
+}
+
+.header__logo-img {
+    width: 173px;
+    height: 33px;
+}
+
