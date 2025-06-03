@@ -1,86 +1,141 @@
-.elements {
-  padding-top: 51px;
+.elements__container {
   max-width: 880px;
-  margin-inline: auto;
+  width: 100%;
+  margin: 50px auto 67px auto;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  opacity: 0px;
+  list-style: none;
   display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
-  /* grid-template-areas;
-    ''
-    ''
-    ; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+  grid-column-gap: 17px;
+  padding: 0px;
 }
 
 .element {
-  max-width: 282px;
-  height: 361px;
-  border-radius: 10px;
-  overflow: hidden;
+  position: relative;
   background-color: white;
   color: black;
-  width: 95%;
-  margin-inline: auto;
-  position: relative;
-}
-
-.element__image {
-  width: 282px;
-  height: 282px;
-  grid-area: image;
-}
-
-.element__title {
-  font-family: Inter;
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1.5;
-  text-align: left;
-  margin-left: 15px;
-  margin-top: 18px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 220px;
-}
-
-.element__like {
-  background-image: url(../images/heart_icon.png);
-  background-size: contain;
-  width: 21px;
-  height: 19px;
-  position: relative;
-  cursor: pointer;
-  bottom: 45px;
-  left: 239px;
-}
-
-.element__like:hover {
-  opacity: 0.7;
-}
-
-.element__like:active {
-  opacity: 1;
-}
-
-.element__like.active {
-  background-image: url(../images/heart_active.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 21px;
-  height: 19px;
-}
-
-.element__trash {
-  border: none;
-  height: 18px;
-  width: 19px;
-  background-color: transparent;
-  position: absolute;
-  right: 0;
-  top: 5px;
-}
-
-.trash-bin {
-  height: 100%;
+  max-width: 282px;
   width: 100%;
+  height: 361px;
+  border-radius: 10px;
+  opacity: 0px;
+}
+
+.element__photo-trash {
+  background: url("../src/images/trash.png") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  height: 19px;
+  width: 14px;
+  position: absolute; /* Posiciona el botón relativo al contenedor */
+  top: 10px; /* Asegura que esté en la parte superior */
+  right: 10px; /* Asegura que esté en la parte derecha */
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.element__photo-trash:hover {
+	scale: 1.1;
+	transition: ease all 1s;
+}
+
+.element__photo-link {
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+}
+
+.element__info {
+  padding: 0 1rem 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element__photo-name {
+  font-family: "Inter", arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  text-align: left;
+  flex-grow: 1;
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Esconde el contenido que se desborda */
+  text-overflow: ellipsis; /* Muestra los puntos suspensivos si el texto es muy largo */
+}
+
+.element__photo-like {
+  background: url("../src/images/like_button.png") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 21px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.element__photo-like_active,
+.element__photo-like:hover {
+  background: url("../src/images/photo__like.png") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 21px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .elements__container {
+    width: 100%; /* Ajusta el ancho para adaptarse al contenedor */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 15px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .element {
+    max-width: 282px;
+    width: 100%;
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
+
+  .element__photo-name {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 29.05px;
+    text-align: left;
+  }
+}
+
+/*Media query para pantalla 320px*/
+
+@media (max-width: 500px) {
+  .elements__container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+
+  .element {
+    width: 100%; /* Asegura que las tarjetas se adapten al contenedor */
+    max-width: 280px; /* Ajusta el ancho máximo para pantallas pequeñas */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
+
+  .element__photo-name {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29.05px;
+    text-align: left;
+  }
 }

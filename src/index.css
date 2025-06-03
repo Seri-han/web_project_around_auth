@@ -1,0 +1,15 @@
+@import "../vendor/normalize.css";
+@import "../vendor/fonts/inter.css";
+@import "../blocks/footer.css";
+@import "../blocks/header.css";
+@import "../blocks/pages.css";
+@import "../blocks/profile.css";
+@import "../blocks/elements.css";
+@import "../blocks/popup__profile.css";
+@import "../blocks/popup__addCard.css";
+@import "../blocks/popupCard.css";
+
+main {
+  background-color: black;
+  color: white;
+}
