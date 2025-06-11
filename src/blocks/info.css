@@ -1,0 +1,38 @@
+.info__tooltip {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 430px;
+    height: 330px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+}
+
+.info__tooltip-image {
+    padding: 60px 0 0;
+    margin: 0 auto;
+    max-width: 120px;
+}
+
+.info__tooltip-img {
+    width: 100%;
+}
+
+.info__paragraph {
+    margin: 32px auto 0;
+    max-width: 360px;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+@media screen and (max-width: 429px) {
+    .info__tooltip {
+        width: 300px;
+    }
+    .info__paragraph {
+        font-size: 20px;
+    }
+  }

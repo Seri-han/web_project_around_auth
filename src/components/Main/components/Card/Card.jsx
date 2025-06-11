@@ -1,4 +1,4 @@
-import { CurrentUserContext } from "../../../../contexts/CurrentUserContext";
+import CurrentUserContext from "../../../../contexts/CurrentUserContext";
 import React, { useContext } from "react";
 
 export default function Card({ card, onImageClick, onCardLike, onCardDelete }) {

@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 0 0;
+  }
+  
+  .nav__logo {
+    margin: 0;
+    padding: 0 0 40px;
+  }
+  
+  .nav__links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    column-gap: 23px;
+    list-style-type: none;
+  }
+  
+  .nav__link {
+    font-family: "Inter", Arial, Sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav__button {
+    font-weight: 400;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 584px) {
+    .nav__logo img {
+      max-width: 130px;
+    }
+  }

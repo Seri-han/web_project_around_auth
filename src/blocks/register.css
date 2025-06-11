@@ -1,0 +1,95 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    align-items: center;
+    max-width: 880px;
+    margin: auto;
+    background-color: #000;
+  }
+  
+  .register__welcome {
+    font-family: 'Inter-Black', Arial, sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 0 0 8px;
+  }
+  
+  .register__error {
+    color: #ff0000;
+  }
+  
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .register__form-input {
+    background-color: #000;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    width: 100%;
+    padding: 0 0 10px;
+    margin: 42px 0 0;
+  }
+
+  .register__form-input_error {
+    border-bottom: 2px solid #ff0000;
+  }
+  
+  .register__label {
+    width: 50%;
+  }
+  
+  .register__button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .register__link {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 216px;
+  }
+
+  .register__link:disabled {
+    pointer-events: none; /* Desactiva los eventos del mouse */
+    opacity: 0.9; /* Reduce la opacidad para indicar que está deshabilitado */
+  }
+  
+  /* Evita el estado hover cuando el botón está deshabilitado */
+  .register__link:not(:disabled):hover {
+    opacity: 0.9;
+  }
+
+  .register__link_disabled {
+    background-color: #c4c4c4;
+    cursor: default;
+  }
+  
+  .register__signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  
+  .register__signin p {
+    margin-right: 12px;
+  }
+  
+  .register__login-link {
+    color: white;
+    text-decoration: none;
+  }
+  
